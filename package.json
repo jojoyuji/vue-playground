@@ -1,0 +1,14 @@
+{
+  "name": "binds-vue",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "author": "Jojo",
+  "license": "ISC",
+  "dependencies": {
+    "normalize.css": "^7.0.0"
+  }
+}
