@@ -6,9 +6,19 @@ import router from './router';
 import store from './store';
 
 //VueMaterial
-import VueMaterial from 'vue-material';
-import 'vue-material/dist/vue-material.css';
-Vue.use(VueMaterial);
+//
+//import VueMaterial from 'vue-material';
+//import 'vue-material/dist/vue-material.css';
+//Vue.use(VueMaterial);
+
+//Vuetify
+//
+import Vuetify from 'vuetify';
+import 'vuetify/dist/vuetify.min.css'
+Vue.use(Vuetify);
+
+
+//import 'vue2-animate/dist/vue2-animate.min.css';
 
 Vue.config.productionTip = false;
 

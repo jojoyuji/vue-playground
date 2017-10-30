@@ -1,25 +1,20 @@
 <template>
 <div class="login">
-  <md-theme md-name="purple">
-    <md-whiteframe md-elevation="2">
-      <md-toolbar>
-        <h1 class="md-title"> Login</h1>
-      </md-toolbar>
-      <form novalidate @submit.stop.prevent="submit">
-        <div class="wrapper">
-          <md-input-container>
-            <label>Email</label>
-            <md-input v-model="email"></md-input>
-          </md-input-container>
-          <md-input-container>
-            <label>Password</label>
-            <md-input v-model="password" type="password"></md-input>
-          </md-input-container>
-        </div>
-        <md-button @click="login()" class="md-primary">Login</md-button>
-      </form>
-    </md-whiteframe>
-  </md-theme>
+  <v-card color="grey lighten-4" flat>
+    <v-card-text>
+      <v-container fluid>
+        <v-layout column>
+          <v-flex >
+            <div class="pa-2">
+              <v-text-field v-model="email" name="email" label="Email" type="email" id="email"></v-text-field>
+              <v-text-field v-model="password" name="password" label="Password" type="password" id="password"></v-text-field>
+            </div>
+          </v-flex>
+          <v-btn flat color="primary" @click="login()">Enviar</v-btn>
+        </v-layout>
+      </v-container>
+    </v-card-text>
+  </v-card>
 
 </div>
 </template>
@@ -47,15 +42,4 @@ export default {
 </script>
 
 <style scoped>
-.login-card {}
-
-.login .md-whiteframe {
-  width: 500px;
-  margin: -16px auto;
-  background: white;
-}
-
-.wrapper {
-  padding: 16px;
-}
 </style>

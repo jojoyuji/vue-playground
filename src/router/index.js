@@ -1,6 +1,6 @@
 import Vue from 'vue';
 import Router from 'vue-router';
-import HelloWorld from '@/components/HelloWorld';
+import Home from '@/components/Home';
 import Login from '@/components/Login';
 import localStorage from '@/localStorage';
 
@@ -17,8 +17,8 @@ const router = new Router({
       },
     {
       path: '/',
-      name: 'Dashboard',
-      component: HelloWorld,
+      name: 'Home',
+      component: Home,
     }
   ]
 });
