@@ -3,7 +3,7 @@
 import Vue from 'vue';
 import App from './App';
 import router from './router';
-import store from './store';
+import store from '@/store';
 
 //VueMaterial
 //
@@ -12,10 +12,11 @@ import store from './store';
 //Vue.use(VueMaterial);
 
 //Vuetify
-//
 import Vuetify from 'vuetify';
 import 'vuetify/dist/vuetify.min.css'
 Vue.use(Vuetify);
+
+import 'mdi/css/materialdesignicons.css'
 
 
 //import 'vue2-animate/dist/vue2-animate.min.css';

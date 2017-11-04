@@ -1,6 +1,6 @@
 import axios from 'axios';
 import localStorage from './localStorage';
-import store from './store';
+import store from './index.js';
 
 const instance = axios.create({
   baseURL: 'https://app.binds.co/api',

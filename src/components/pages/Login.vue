@@ -21,6 +21,7 @@
 
 <script>
 export default {
+  props: ['redirect'],
   name: 'Login',
   data() {
     return {
@@ -34,7 +35,7 @@ export default {
         email: this.email,
         password: this.password
       }).then(() => {
-        this.$router.push("/")
+        this.$router.push(this.$route.query.redirect || '/')
       });
     }
   }

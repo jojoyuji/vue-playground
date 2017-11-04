@@ -1,8 +1,9 @@
 import Vue from 'vue';
 import Router from 'vue-router';
-import Home from '@/components/Home';
-import Login from '@/components/Login';
-import localStorage from '@/localStorage';
+import Home from '@/components/pages/Home';
+import Login from '@/components/pages/Login';
+import Surveys from '@/components/pages/Surveys';
+import localStorage from '@/store/localStorage';
 
 Vue.use(Router);
 
@@ -19,6 +20,11 @@ const router = new Router({
       path: '/',
       name: 'Home',
       component: Home,
+    },
+    {
+      path: '/surveys',
+      name: 'Surveys',
+      component: Surveys,
     }
   ]
 });

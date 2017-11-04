@@ -12,19 +12,36 @@
 
         <v-list-tile router to="/" exact>
           <v-list-tile-action>
-            <v-icon>exit_to_app</v-icon>
+            <v-icon>mdi-home</v-icon>
           </v-list-tile-action>
           <v-list-tile-content>
             <v-list-tile-title>Home</v-list-tile-title>
           </v-list-tile-content>
         </v-list-tile>
 
+        <v-list-tile router to="surveys" exact>
+          <v-list-tile-action>
+            <v-icon>mdi-emoticon-happy</v-icon>
+          </v-list-tile-action>
+          <v-list-tile-content>
+            <v-list-tile-title>Surveys</v-list-tile-title>
+          </v-list-tile-content>
+        </v-list-tile>
+
         <v-list-tile router to="login">
           <v-list-tile-action>
-            <v-icon>exit_to_app</v-icon>
+            <v-icon>mdi-login-variant</v-icon>
           </v-list-tile-action>
           <v-list-tile-content>
             <v-list-tile-title>Login</v-list-tile-title>
+          </v-list-tile-content>
+        </v-list-tile>
+        <v-list-tile @click="logout()">
+          <v-list-tile-action >
+            <v-icon>mdi-login-variant</v-icon>
+          </v-list-tile-action>
+          <v-list-tile-content>
+            <v-list-tile-title>Logout</v-list-tile-title>
           </v-list-tile-content>
         </v-list-tile>
 
@@ -32,7 +49,6 @@
       </v-list>
     </v-navigation-drawer>
     <main>
-      <v-navigation-drawer temporary v-model="left" fixed></v-navigation-drawer>
       <v-content>
         <v-container fluid fill-height>
           <v-layout>
@@ -56,21 +72,19 @@
 </template>
 
 <script>
-import api from './api'
-import localStorage from './localStorage'
+import localStorage from './store/localStorage'
 
 export default {
   name: 'app',
   data() {
     return {
       drawer: true,
-      drawerRight: true,
-      right: null,
-      left: null
     }
   },
-  props: {
-    source: String
+  methods: {
+    logout(){
+      this.$store.dispatch('LOGOUT');
+    }
   }
 }
 </script>
